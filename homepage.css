@@ -1,0 +1,45 @@
+
+#head {
+    font-weight: bold;
+    font-size: 2rem;
+    left: 0;
+    top: 0;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+    color: whitesmoke;
+}
+.nav-item a:hover {
+    color: whitesmoke;
+    transform: scale(1.05);
+}
+
+.nav-link{
+  font-size: 1.3rem;
+  color: aqua;
+}
+hr {
+  background-color: black;
+  border-style: none;
+  margin: 0;
+  width: 1px;
+  height: 1px;
+}
+.home{
+  color: lightblue;
+  background-color: #2b3035;
+}
+.but{
+  background-color: aqua;
+  transition: .5s;
+}
+.but:hover{
+  background-color: whitesmoke;
+  transform: scale(1.05);
+}
+.works{
+  background-color: #2b3035;
+  color: lightblue;
+}
+.feature{
+  color: whitesmoke;
+}
