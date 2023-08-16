@@ -1,4 +1,4 @@
-function inputFile() {
+function uploadFile() {
     const input = document.createElement('input');
     input.type = 'file';
     input.onchange = () => {

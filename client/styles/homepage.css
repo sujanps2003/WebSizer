@@ -1,4 +1,6 @@
-
+body {
+  font-family: 'Roboto', sans-serif;
+}
 #head {
     font-weight: bold;
     font-size: 2rem;
@@ -33,7 +35,7 @@ hr {
   transition: .5s;
 }
 .but:hover{
-  background-color: whitesmoke;
+  background-color: rgb(179, 231, 231);
   transform: scale(1.05);
 }
 .works{

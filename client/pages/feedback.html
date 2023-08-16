@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html data-bs-theme='dark'>
+
+<head>
+    <title>FEEDBACK FORM </title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="../styles/feedback.css">
+</head>
+
+<body>
+
+    <form method='POST' action="feedback">
+        <div class="formContainer">
+            <div class="heading">
+                FEEDBACK FORM
+            </div>
+            <div class="form">
+                <form id="form">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" id="name" />
+                    <label for="email">Email</label>
+                    <input name="email" type="email" id="email" />
+                    <label for="feedback">Feedback</label>
+                    <textarea name="feedback" id="feedback"></textarea>
+                    <button type="submit" style="height: 45px;">SUBMIT</button>
+                </form>
+            </div>
+
+            <div id="loading">
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+            </div>
+
+            <div id="status">
+
+            </div>
+
+        </div>
+    </form>
+
+</body>
+
+</html>
