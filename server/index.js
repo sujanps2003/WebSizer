@@ -37,7 +37,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"homepage.html"))
+    res.sendFile(path.join(__dirname,"index.html"))
 })
 app.get("/feedback",(req,res)=>{
     res.sendFile(path.join(__dirname,'feedback.html'))
@@ -62,7 +62,7 @@ app.post("/feedback",(req,res)=>{
     // res.sendFile(path.join(__dirname,"homepage.html"))
 })
 app.post('/return',(req,res)=>{
-    res.sendFile(path.join(__dirname,"homepage.html"));
+    res.sendFile(path.join(__dirname,"index.html"));
 })
 app.listen(port,(req,res)=>{
     console.log("Port created")
