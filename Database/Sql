@@ -1,6 +1,0 @@
-show databases;
-create database Feedback;
-use Feedback;
-show tables;
-create table feed(Cust_name varchar(20),Email varchar(50),feedback varchar(100));
-select * from emp;

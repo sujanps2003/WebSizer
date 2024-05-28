@@ -8,31 +8,31 @@ import mysql from 'mysql2'
 const app=express()
 const port=3000
 const __dirname=dirname(fileURLToPath(import.meta.url))
-const connection = mysql.createConnection({
-    host:'localhost',
-    port:'3306',
-    user:'root',
-    password:'root',
-    database:'feedback'
-});
-// create connection.
-connection.connect((err)=>{
-    if(err){
-        console.log("error");
-    }
-    else{
-        console.log('successful connection');
-    }
-});
-// End connection
-// connection.end((err)=>{
+// const connection = mysql.createConnection({
+//     host:'localhost',
+//     port:'3306',
+//     user:'root',
+//     password:'root',
+//     database:'feedback'
+// });
+// // create connection.
+// connection.connect((err)=>{
 //     if(err){
-//         console.log('error');
+//         console.log("error");
 //     }
 //     else{
-//         console.log('successful disconnected');
+//         console.log('successful connection');
 //     }
-// })
+// });
+// // End connection
+// // connection.end((err)=>{
+// //     if(err){
+// //         console.log('error');
+// //     }
+// //     else{
+// //         console.log('successful disconnected');
+// //     }
+// // })
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -48,16 +48,16 @@ app.post("/feedback",(req,res)=>{
     const email=req.body['email']
     const feedback=req.body['feedback']
     console.log(name+" "+email+" "+feedback)
-    const insert= 'INSERT INTO record(name,email,feed) values (?,?,?)';
-        connection.query(insert,[name,email,feedback],(err,result)=>{
-            if(err){
-                console.error("Error:- ",err);
-                return;
-            }
-            else{
-                console.log("Result :- ",result);
-            }
-        });
+    // const insert= 'INSERT INTO record(name,email,feed) values (?,?,?)';
+    //     connection.query(insert,[name,email,feedback],(err,result)=>{
+    //         if(err){
+    //             console.error("Error:- ",err);
+    //             return;
+    //         }
+    //         else{
+    //             console.log("Result :- ",result);
+    //         }
+    //     });
     res.render('acknowledge.ejs',{name});
     // res.sendFile(path.join(__dirname,"homepage.html"))
 })
@@ -65,5 +65,5 @@ app.post('/return',(req,res)=>{
     res.sendFile(path.join(__dirname,"index.html"));
 })
 app.listen(port,(req,res)=>{
-    console.log("Port created")
+    console.log(`Port is live on 'http://localhost:${port}'`)
 })
